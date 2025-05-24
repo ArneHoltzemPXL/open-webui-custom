@@ -30,6 +30,30 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'Raleway-Medium';
+	src: url('/assets/fonts/Raleway-Medium.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Raleway-Regular';
+	src: url('/assets/fonts/Raleway-Regular.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Raleway-SemiBold';
+	src: url('/assets/fonts/Raleway-SemiBold.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Sans MS';
+	src: url('/assets/fonts/Comic Sans MS.ttf');
+	font-display: swap;
+}
+
 html {
 	word-break: break-word;
 }
@@ -38,6 +62,12 @@ code {
 	/* white-space-collapse: preserve !important; */
 	overflow-x: auto;
 	width: auto;
+}
+
+.font-primary {
+	/* font-family: 'Archivo', 'Vazirmatn', sans-serif; */
+	font-family: 'Raleway-Medium', sans-serif;
+
 }
 
 .font-secondary {
@@ -78,10 +108,6 @@ textarea::placeholder {
 
 .markdown a {
 	@apply underline;
-}
-
-.font-primary {
-	font-family: 'Archivo', 'Vazirmatn', sans-serif;
 }
 
 .drag-region {
@@ -412,3 +438,111 @@ input[type='number'] {
 .hljs-strong {
 	font-weight: 700;
 }
+
+img.size-9.\@sm\:size-10.rounded-full.border-\[1px\].border-gray-100.dark\:border-none {
+	/* display: none; */
+}
+
+
+
+
+
+//Dark theme
+.dark\:bg-gray-900 {
+	/* background-color:rgb(112, 1, 1); */
+}
+
+.dark\:bg-gray-950 {
+	/* background-color:rgb(145, 0, 0); */
+}
+
+//Gradient nav dark theme
+.dark\:to-transparent {
+        /* --tw-gradient-to: transparent; */
+        /* --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); */
+}
+<style>
+.dark\:via-gray-900 {
+        /* --tw-gradient-via: var(--color-gray-900, #171717); */
+        /* --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position); */
+        /* --tw-gradient-stops: var(--tw-gradient-via-stops); */
+}
+<style>
+.dark\:from-gray-900 {
+        /* --tw-gradient-from: var(--color-gray-900, #171717); */
+        /* --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); */
+}
+
+
+
+
+
+//Light theme
+.bg-white {
+    /* background-color: var(--color-white); */
+}
+
+.bg-gray-50 {
+    /* background-color: var(--color-gray-50, #f9f9f9); */
+}
+
+//gradient nav light theme
+.via-white {
+    /* --tw-gradient-via: var(--color-white); */
+    /* --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position); */
+    /* --tw-gradient-stops: var(--tw-gradient-via-stops); */
+}
+
+.from-white {
+    /* --tw-gradient-from: var(--color-white); */
+    /* --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); */
+}
+
+
+
+
+
+//nav bg color
+nav.sticky.top-0.z-30.w-full.py-1.-mb-8.flex.flex-col.items-center.drag-region {
+	/* background-color: rgb(112, 1, 1); */
+}
+
+
+
+
+div.text-gray-700.dark\:text-gray-100.bg-white.dark\:bg-gray-900.h-screen.max-h-\[100dvh\].overflow-auto.flex.flex-row.justify-end.s-uQk77vb8087t {
+	/* background-image: url('/static/PXL-logo.png');
+	background-repeat: no-repeat;
+    background-size: 550px;
+    background-blend-mode: overlay;
+    background-position: center; */
+}
+
+/* #chat-container {
+    position: relative;
+} */
+
+/* #chat-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/static/PXL-logo.png');
+    background-repeat: no-repeat;
+    background-size: 550px;
+    background-position: center;
+    opacity: 0.3;
+	filter: drop-shadow(0px 0px 8px black);
+} */
+ 
+ #logo {
+	filter: drop-shadow(0px 0px 8px black);
+ }
+
+ nav.sticky.top-0.z-30.w-full.py-1.-mb-8.flex.flex-col.items-center.drag-region {
+	/* background-color: rgb(112, 1, 1); */
+ }
+
+ 

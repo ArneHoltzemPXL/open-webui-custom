@@ -1,0 +1,132 @@
+# Query: static/favicon.png
+# ContextLines: 1
+
+31 results - 20 files
+
+backend\open_webui\main.py:
+  1559      <InputEncoding>UTF-8</InputEncoding>
+  1560:     <Image width="16" height="16" type="image/x-icon">{app.state.config.WEBUI_URL}/static/PXL-logo.png</Image>
+  1561      <Url type="text/html" method="get" template="{app.state.config.WEBUI_URL}/?q={"{searchTerms}"}"/>
+
+backend\open_webui\models\models.py:
+  37  class ModelMeta(BaseModel):
+  38:     profile_image_url: Optional[str] = "/static/PXL-logo.png"
+  39  
+
+backend\open_webui\test\apps\webui\routers\test_models.py:
+  27                      "meta": {
+  28:                         "profile_image_url": "/static/PXL-logo.png",
+  29                          "description": "description",
+
+src\lib\components\NotificationToast.svelte:
+  40  	<div class="shrink-0 self-top -translate-y-0.5">
+  41: 		<img src={'/static/PXL-logo.png'} alt="PXL-logo" class="size-7 rounded-full" />
+  42  	</div>
+
+src\lib\components\OnBoarding.svelte:
+  48  						crossorigin="anonymous"
+  49: 						src="{WEBUI_BASE_URL}/static/PXL-logo.png"
+  50  						class=" w-6 rounded-full"
+
+src\lib\components\admin\Settings\Models.svelte:
+  301  									<img
+  302: 										src={model?.meta?.profile_image_url ?? '/static/PXL-logo.png'}
+  303  										alt="modelfile profile"
+
+src\lib\components\app\AppSidebar.svelte:
+  51  			<img
+  52: 				src="/static/PXL-logo.png"
+  53  				class="size-10 {selected === '' ? 'rounded-2xl' : 'rounded-full'}"
+
+src\lib\components\channel\Messages\Message.svelte:
+  146  							src={message.user?.profile_image_url ??
+  147: 								($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/static/PXL-logo.png`)}
+  148  							className={'size-8 translate-y-1 ml-0.5'}
+
+src\lib\components\channel\Messages\Message\ProfilePreview.svelte:
+  42  							crossorigin="anonymous"
+  43: 							src={user?.profile_image_url ?? `${WEBUI_BASE_URL}/static/PXL-logo.png`}
+  44  							class=" absolute -bottom-5 left-3 size-12 ml-0.5 object-cover rounded-full -translate-y-[1px]"
+
+src\lib\components\chat\ChatPlaceholder.svelte:
+  57  										? `/doge.png`
+  58: 										: `${WEBUI_BASE_URL}/static/PXL-logo.png`)}
+  59  								class=" size-[2.7rem] rounded-full border-[1px] border-gray-100 dark:border-none"
+
+src\lib\components\chat\MessageInput.svelte:
+  445  												? `/doge.png`
+  446: 												: `${WEBUI_BASE_URL}/static/PXL-logo.png`)}
+  447  									/>
+
+src\lib\components\chat\MessageInput\CallOverlay.svelte:
+  758  									: 'size-12'}  transition-all rounded-full {(model?.info?.meta
+  759: 							?.profile_image_url ?? '/static/PXL-logo.png') !== '/static/PXL-logo.png'
+  760  							? ' bg-cover bg-center bg-no-repeat'
+  761  							: 'bg-black dark:bg-white'}  bg-black dark:bg-white"
+  762: 						style={(model?.info?.meta?.profile_image_url ?? '/static/PXL-logo.png') !==
+  763: 						'/static/PXL-logo.png'
+  764  							? `background-image: url('${model?.info?.meta?.profile_image_url}');`
+
+  840  										: 'size-40'}  transition-all rounded-full {(model?.info?.meta
+  841: 								?.profile_image_url ?? '/static/PXL-logo.png') !== '/static/PXL-logo.png'
+  842  								? ' bg-cover bg-center bg-no-repeat'
+  843  								: 'bg-black dark:bg-white'} "
+  844: 							style={(model?.info?.meta?.profile_image_url ?? '/static/PXL-logo.png') !==
+  845: 							'/static/PXL-logo.png'
+  846  								? `background-image: url('${model?.info?.meta?.profile_image_url}');`
+
+src\lib\components\chat\MessageInput\Commands\Models.svelte:
+  94  								<img
+  95: 									src={model?.info?.meta?.profile_image_url ?? '/static/PXL-logo.png'}
+  96  									alt={model?.name ?? model.id}
+
+src\lib\components\chat\Messages\ProfileImage.svelte:
+   4  	export let className = 'size-8';
+   5: 	export let src = `${WEBUI_BASE_URL}/static/PXL-logo.png`;
+   6  </script>
+
+  10  	src={src === ''
+  11: 		? `${WEBUI_BASE_URL}/static/PXL-logo.png`
+  12  		: src.startsWith(WEBUI_BASE_URL) ||
+
+src\lib\components\chat\Messages\ResponseMessage.svelte:
+  613  				src={model?.info?.meta?.profile_image_url ??
+  614: 					($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/static/PXL-logo.png`)}
+  615  				className={'size-8'}
+
+src\lib\components\chat\ModelSelector\Selector.svelte:
+  503  												<img
+  504: 													src={item.model?.info?.meta?.profile_image_url ?? '/static/PXL-logo.png'}
+  505  													alt="Model"
+
+src\lib\components\layout\Sidebar.svelte:
+  505  							crossorigin="anonymous"
+  506: 							src="{WEBUI_BASE_URL}/static/PXL-logo.png"
+  507  							class=" size-5 -translate-x-1.5 rounded-full"
+
+src\lib\components\workspace\Models.svelte:
+  278  							<img
+  279: 								src={model?.meta?.profile_image_url ?? '/static/PXL-logo.png'}
+  280  								alt="modelfile profile"
+
+src\lib\components\workspace\Models\ModelEditor.svelte:
+   64  		meta: {
+   65: 			profile_image_url: '/static/PXL-logo.png',
+   66  			description: '',
+
+  377  							class="rounded-xl flex shrink-0 items-center {info.meta.profile_image_url !==
+  378: 							'/static/PXL-logo.png'
+  379  								? 'bg-transparent'
+
+  393  								<img
+  394: 									src="/static/PXL-logo.png"
+  395  									alt="model profile"
+
+  429  								on:click={() => {
+  430: 									info.meta.profile_image_url = '/static/PXL-logo.png';
+  431  								}}
+
+src\routes\(app)\workspace\models\create\+page.svelte:
+  32  					...modelInfo.meta,
+  33: 					profile_image_url: modelInfo.meta.profile_image_url ?? '/static/PXL-logo.png',
+  34  					suggestion_prompts: modelInfo.meta.suggestion_prompts

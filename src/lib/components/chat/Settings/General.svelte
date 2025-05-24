@@ -15,7 +15,7 @@
 	export let getModels: Function;
 
 	// General
-	let themes = ['dark', 'light', 'rose-pine dark', 'rose-pine-dawn light', 'oled-dark'];
+	let themes = ['dark', 'light', 'rose-pine dark', 'rose-pine-dawn light', 'oled-dark', 'PXL'];
 	let selectedTheme = 'system';
 
 	let languages: Awaited<ReturnType<typeof getLanguages>> = [];
@@ -164,6 +164,8 @@
 	const applyTheme = (_theme: string) => {
 		let themeToApply = _theme === 'oled-dark' ? 'dark' : _theme;
 
+		// resetThemeProperties();
+
 		if (_theme === 'system') {
 			themeToApply = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 		}
@@ -203,9 +205,10 @@
 						? '#171717'
 						: _theme === 'oled-dark'
 							? '#000000'
-							: _theme === 'her'
-								? '#983724'
-								: '#ffffff'
+							: '#ffffff'
+							// _theme === 'PXL' // Voeg hier je speciale kleur toe
+							// 	? '#ff0000' // Vervang dit met je gewenste kleur
+							// 	: '#ffffff'
 				);
 			}
 		}
@@ -220,10 +223,50 @@
 			document.documentElement.style.setProperty('--color-gray-900', '#000000');
 			document.documentElement.style.setProperty('--color-gray-950', '#000000');
 			document.documentElement.classList.add('dark');
-		}
+		} 
+		// else if (_theme === 'PXL') {
+		// 	// PXL-thema kleuren (paars/rood accent)
+		// 	document.documentElement.style.setProperty('--text-gray-600', '#fff');
+		// 	document.documentElement.style.setProperty('--text-gray-700', '#4e4e4e');
+
+		// 	document.documentElement.style.setProperty('--color-gray-100', '#4e4e4e');
+		// 	document.documentElement.style.setProperty('--color-gray-300', '#4e4e4e');
+			
+
+		// 	document.documentElement.style.setProperty('--color-gray-800', '#1a1a2e');
+		// 	document.documentElement.style.setProperty('--color-gray-850', '#16213e');
+		// 	document.documentElement.style.setProperty('--color-gray-900', '#fff');
+		// 	document.documentElement.style.setProperty('--color-gray-950', '#000');
+
+		// 	// PXL accentkleuren
+
+		// 	// Meta theme color voor browser UI
+		// 	metaThemeColor.setAttribute('content', '#0f3460');
+
+		// 	// Zorg dat dark class wordt toegevoegd voor donkere thema's
+		// 	document.documentElement.classList.add('dark');
+		// }
 
 		console.log(_theme);
 	};
+
+	// Helper functie om theme properties te resetten
+	// function resetThemeProperties() {
+	// 	const propertiesToReset = [
+	// 		'--text-gray-600',
+	// 		'--text-gray-700',
+	// 		'--color-gray-100',
+	// 		'--color-gray-300',
+	// 		'--color-gray-800',
+	// 		'--color-gray-850',
+	// 		'--color-gray-900',
+	// 		'--color-gray-950'
+	// 	];
+
+	// 	propertiesToReset.forEach((prop) => {
+	// 		document.documentElement.style.removeProperty(prop);
+	// 	});
+	// }
 
 	const themeChangeHandler = (_theme: string) => {
 		theme.set(_theme);
@@ -248,9 +291,11 @@
 					>
 						<option value="system">⚙️ {$i18n.t('System')}</option>
 						<option value="dark">🌑 {$i18n.t('Dark')}</option>
-						<option value="oled-dark">🌃 {$i18n.t('OLED Dark')}</option>
+						<!-- <option value="oled-dark">🌃 {$i18n.t('OLED Dark')}</option> -->
 						<option value="light">☀️ {$i18n.t('Light')}</option>
-						<option value="her">🌷 Her</option>
+						<!-- <option value="PXL">🌟 PXL</option> -->
+
+						<!-- <option value="her">🌷 Her</option> -->
 						<!-- <option value="rose-pine dark">🪻 {$i18n.t('Rosé Pine')}</option>
 						<option value="rose-pine-dawn light">🌷 {$i18n.t('Rosé Pine Dawn')}</option> -->
 					</select>

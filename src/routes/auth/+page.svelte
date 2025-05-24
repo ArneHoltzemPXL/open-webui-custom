@@ -157,7 +157,7 @@
 
 <svelte:head>
 	<title>
-		{`${$WEBUI_NAME}`}
+		{`PXL Local LLM`}
 	</title>
 </svelte:head>
 
