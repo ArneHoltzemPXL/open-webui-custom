@@ -62,7 +62,7 @@
 		base_model_id: null,
 		name: '',
 		meta: {
-			profile_image_url: '/static/favicon.png',
+			profile_image_url: '/static/PXL-logo.png',
 			description: '',
 			suggestion_prompts: null,
 			tags: []
@@ -375,7 +375,7 @@
 					<div class="self-center">
 						<button
 							class="rounded-xl flex shrink-0 items-center {info.meta.profile_image_url !==
-							'/static/favicon.png'
+							'/static/PXL-logo.png'
 								? 'bg-transparent'
 								: 'bg-white'} shadow-xl group relative"
 							type="button"
@@ -391,7 +391,7 @@
 								/>
 							{:else}
 								<img
-									src="/static/favicon.png"
+									src="/static/PXL-logo.png"
 									alt="model profile"
 									class=" rounded-xl size-72 md:size-60 object-cover shrink-0"
 								/>
@@ -427,7 +427,7 @@
 							<button
 								class="px-2 py-1 text-gray-500 rounded-lg text-xs"
 								on:click={() => {
-									info.meta.profile_image_url = '/static/favicon.png';
+									info.meta.profile_image_url = '/static/PXL-logo.png';
 								}}
 								type="button"
 							>

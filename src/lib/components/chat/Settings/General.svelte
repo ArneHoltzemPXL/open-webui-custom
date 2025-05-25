@@ -15,7 +15,15 @@
 	export let getModels: Function;
 
 	// General
-	let themes = ['dark', 'light', 'rose-pine dark', 'rose-pine-dawn light', 'oled-dark', 'PXL'];
+	let themes = [
+		'dark',
+		'light',
+		'rose-pine dark',
+		'rose-pine-dawn light',
+		'oled-dark',
+		'PXL',
+		'blue'
+	];
 	let selectedTheme = 'system';
 
 	let languages: Awaited<ReturnType<typeof getLanguages>> = [];
@@ -205,10 +213,9 @@
 						? '#171717'
 						: _theme === 'oled-dark'
 							? '#000000'
-							: '#ffffff'
-							// _theme === 'PXL' // Voeg hier je speciale kleur toe
-							// 	? '#ff0000' // Vervang dit met je gewenste kleur
-							// 	: '#ffffff'
+							: _theme === 'blue' // Voeg hier je speciale kleur toe
+								? '#ff0000' // Vervang dit met je gewenste kleur
+								: '#ffffff'
 				);
 			}
 		}
@@ -223,7 +230,24 @@
 			document.documentElement.style.setProperty('--color-gray-900', '#000000');
 			document.documentElement.style.setProperty('--color-gray-950', '#000000');
 			document.documentElement.classList.add('dark');
-		} 
+		} else if (_theme === 'blue') {
+			document.documentElement.classList.add('dark');
+    		document.documentElement.classList.add('midnight-blue'); // Nieuwe class toevoegen
+    
+    		// Blauwe tinten in plaats van paars
+    		document.documentElement.style.setProperty('--color-gray-800', '#0f172a'); // Donker blauwgrijs
+    		document.documentElement.style.setProperty('--color-gray-850', '#0c1423'); // Dieper blauw
+    		document.documentElement.style.setProperty('--color-gray-900', '#0a1121'); // Zeer donker blauw
+    		document.documentElement.style.setProperty('--color-gray-950', '#070d19'); // Bijna zwart blauw
+    
+    		// Accentkleuren (blauw in plaats van paars)
+    		document.documentElement.style.setProperty('--color-primary', '#3b82f6'); // Helder blauw
+    		document.documentElement.style.setProperty('--color-primary-hover', '#2563eb'); // Donkerder blauw
+    		document.documentElement.style.setProperty('--color-secondary', '#1e40af'); // Diep blauw
+    
+    		// Meta theme color aanpassen
+    		metaThemeColor.setAttribute('content', '#0a1121');
+	}
 		// else if (_theme === 'PXL') {
 		// 	// PXL-thema kleuren (paars/rood accent)
 		// 	document.documentElement.style.setProperty('--text-gray-600', '#fff');
@@ -231,7 +255,6 @@
 
 		// 	document.documentElement.style.setProperty('--color-gray-100', '#4e4e4e');
 		// 	document.documentElement.style.setProperty('--color-gray-300', '#4e4e4e');
-			
 
 		// 	document.documentElement.style.setProperty('--color-gray-800', '#1a1a2e');
 		// 	document.documentElement.style.setProperty('--color-gray-850', '#16213e');
@@ -293,8 +316,8 @@
 						<option value="dark">🌑 {$i18n.t('Dark')}</option>
 						<!-- <option value="oled-dark">🌃 {$i18n.t('OLED Dark')}</option> -->
 						<option value="light">☀️ {$i18n.t('Light')}</option>
+						<option value="blue">🌌 Deep Blue</option>
 						<!-- <option value="PXL">🌟 PXL</option> -->
-
 						<!-- <option value="her">🌷 Her</option> -->
 						<!-- <option value="rose-pine dark">🪻 {$i18n.t('Rosé Pine')}</option>
 						<option value="rose-pine-dawn light">🌷 {$i18n.t('Rosé Pine Dawn')}</option> -->

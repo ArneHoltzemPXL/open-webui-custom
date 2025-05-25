@@ -34,7 +34,7 @@
 		}
 	};
 
-	let profileImageUrl = '/favicon.png';
+	let profileImageUrl = '/PXL-logo.png';
 	let description = '';
 
 	let selectedModelId = '';
@@ -90,7 +90,7 @@
 
 		name = '';
 		id = '';
-		profileImageUrl = '/favicon.png';
+		profileImageUrl = '/PXL-logo.png';
 		description = '';
 		modelIds = [];
 		selectedModelId = '';

@@ -2,13 +2,13 @@
 	import { WEBUI_BASE_URL } from '$lib/constants';
 
 	export let className = 'size-8';
-	export let src = `${WEBUI_BASE_URL}/static/favicon.png`;
+	export let src = `/static/PXL-logo.png`;
 </script>
 
 <img
 	crossorigin="anonymous"
 	src={src === ''
-		? `${WEBUI_BASE_URL}/static/favicon.png`
+		? `/static/PXL-logo.png`
 		: src.startsWith(WEBUI_BASE_URL) ||
 			  src.startsWith('https://www.gravatar.com/avatar/') ||
 			  src.startsWith('data:') ||
